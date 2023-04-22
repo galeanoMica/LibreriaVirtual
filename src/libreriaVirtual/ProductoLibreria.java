@@ -2,14 +2,20 @@ package libreriaVirtual;
 
 import java.time.LocalDate;
 
-private LocalDate fechaDepublicacion ;
-private int codigo ;
-private Tipo tipo;
+public abstract class ProductoLibreria {
+	
+	private LocalDate fechaDepublicacion ;
+	private int codigo ;
+	private String tipo;
+	
+	
 
-public ProductosDeLibreria(LocalDate fechaDepublicacion, int codigo, Tipo tipo) {
+public ProductoLibreria(LocalDate fechaDepublicacion, int codigo, String tipo) {
 	this.fechaDepublicacion = fechaDepublicacion;
 	this.codigo = codigo;
-	this.tipo = tipo;
+	this.setTipo(tipo);
+	
+	
 }
 
 public LocalDate getFechaDepublicacion() {
@@ -28,12 +34,17 @@ public void setCodigo(int codigo) {
 	this.codigo = codigo;
 }
 
-public Tipo getTipo() {
+public abstract double getPrecioVenta();
+
+public String getTipo() {
 	return tipo;
 }
 
-public void setTipo(Tipo tipo) {
+public void setTipo(String tipo) {
 	this.tipo = tipo;
 }
+
+
+
 	
 }

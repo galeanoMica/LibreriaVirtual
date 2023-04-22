@@ -1,15 +1,22 @@
-public class Libro extends ProductosDeLibreria {
+package libreriaVirtual;
+
+import java.time.LocalDate;
+
+public class Libro extends ProductoLibreria {
     private String titulo;
     private String autorPrincipal;
     private String editorial ;
-    
+    private double precio;
     
 
-    public Libro(String titulo, String autorPrincipal, String editorial, LocalDate fechaDepublicacion, int codigo, Tipo tipo) {
+    public Libro(String titulo, String autorPrincipal, String editorial, LocalDate fechaDepublicacion, int codigo, double precio, String tipo) {
         super(fechaDepublicacion, codigo, tipo);
         this.titulo = titulo;
         this.autorPrincipal = autorPrincipal;
         this.editorial = editorial;
+        this.setPrecio(precio);
+        
+        
     }
 
    
@@ -36,5 +43,30 @@ public class Libro extends ProductosDeLibreria {
     public void setEditorial(String editorial) {
         this.editorial = editorial;
     }
+
+    public double getPrecio() {
+		return precio;
+	}
+
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+    
+
+	@Override
+	public double getPrecioVenta() {
+		// TODO Auto-generated method stub
+		double precioVenta = this.getPrecio();
+		if(this.getTipo().equals("fisico")) {
+			precioVenta *=1.18;
+		}else if(this.getTipo().equals("digital")) {
+			precioVenta *= 1.08;
+		}
+		return precioVenta;
+	}
+
+
+	
     
 }
