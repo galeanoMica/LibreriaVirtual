@@ -16,7 +16,7 @@ public class ItemCarrito {
 		if(producto.cantidad >= cantidad) {
 			System.out.println("Total : " + producto.getPrecioVenta());
 		}else {
-			System.out.println("No hay stock disponible");
+			System.out.println("No hay stock disponible del producto");
 		}
 	}
 	
