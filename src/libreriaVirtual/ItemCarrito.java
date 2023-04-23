@@ -9,7 +9,7 @@ public class ItemCarrito {
 		this.producto = producto;
 		this.cantidad = cantidad;
 	}
-	
+
 	public void mostrarItem() {
 		System.out.println("Producto: " + producto.getTipo() + " - cantidad: " + cantidad);
 		
