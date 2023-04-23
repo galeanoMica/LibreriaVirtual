@@ -8,8 +8,8 @@ public class Revista extends ProductoLibreria {
     private String editor;
     private double precio;
 
-    public Revista(String nombre, String editor, LocalDate fechaDepublicacion, int codigo, double precio, String tipo) {
-        super(fechaDepublicacion, codigo, tipo);
+    public Revista(String nombre, String editor, LocalDate fechaDepublicacion, int codigo, double precio, String tipo, int cantidad) {
+        super(fechaDepublicacion, codigo, tipo, cantidad);
         this.nombre = nombre;
         this.editor = editor;
         this.setPrecio(precio);
