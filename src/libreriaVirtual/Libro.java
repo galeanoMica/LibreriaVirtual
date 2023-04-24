@@ -9,12 +9,13 @@ public class Libro extends ProductoLibreria {
     private double precio;
     
 
-    public Libro(String titulo, String autorPrincipal, String editorial,  int codigo, double precio, String tipo, int cantidad) {
-        super( codigo, tipo, cantidad);
+    public Libro(LocalDate fechaDePublicacion, String titulo, String autorPrincipal, String editorial,  int codigo, double precio, String tipo, int cantidad) {
+        super(fechaDePublicacion, codigo, tipo, cantidad);
         this.titulo = titulo;
         this.autorPrincipal = autorPrincipal;
         this.editorial = editorial;
         this.setPrecio(precio);
+        
         
         
     }

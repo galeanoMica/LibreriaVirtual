@@ -12,7 +12,7 @@ public class ProductoLibreria {
 	
 
 public ProductoLibreria(LocalDate fechaDepublicacion, int codigo, String tipo, int cantidad) {
-	this.fechaDepublicacion = LocalDate.now();
+	this.fechaDepublicacion = fechaDepublicacion;
 	this.codigo = codigo;
 	this.setTipo(tipo);
 	this.cantidad = cantidad;
@@ -35,13 +35,13 @@ public void setCantidad(int cantidad) {
 	this.cantidad = cantidad;
 }
 
-//public LocalDate getFechaDepublicacion() {
-	//return fechaDepublicacion;
-//}
+public LocalDate getFechaDepublicacion() {
+	return fechaDepublicacion;
+}
 
-//public void setFechaDepublicacion(LocalDate fechaDepublicacion) {
-	//this.fechaDepublicacion = fechaDepublicacion;
-//}
+public void setFechaDepublicacion(LocalDate fechaDepublicacion) {
+	this.fechaDepublicacion = fechaDepublicacion;
+}
 
 public int getCodigo() {
 	return codigo;
