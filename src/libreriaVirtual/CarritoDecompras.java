@@ -1,30 +1,31 @@
 package libreriaVirtual;
 
-import ar.edu.utn.ItemCarrito;
+import java.util.ArrayList;
 
-public class CarritoDecompras {
 
-	private ArrayList<itemsCarrito>items;
+ class CarritoDecompras {
+
+	private ArrayList<ItemCarrito>items;
 	
 	
 	public CarritoDecompras() {
-         this.items = new ArrayList<itemsCarrito>();		
+         this.items = new ArrayList<ItemCarrito>();		
 		
 	}
 	
 	public void agregarItem(ItemCarrito itemc) {
-		this.items.add(itemsC);
+		this.items.add(itemc);
 	}
 	
 	
-	public void quitarItem(ItemCarrito ic) {
-		this.items.remove(ic);
+	public void quitarItem(ItemCarrito itemc) {
+		this.items.remove(itemc);
 	}
 
 	
 	public void mostrarCarrito() {
 		if(items.isEmpty()) {
-			system.out.printl("No hay productos en el carrito");
+			System.out.println("No hay productos en el carrito");
 		
 		} else {
 			for (ItemCarrito i: items) {
