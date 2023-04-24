@@ -14,7 +14,7 @@ public class MenuCompras {
 		Revista vogueDigital = new Revista("Vogue - Digital", "Ediciones Condé Nast", 003, 400, "digital", 2);
 		Revista vogueFisico = new Revista("Vogue - Fisico", "Ediciones Condé Nast", 004, 400, "fisico", 2);
 		
-		
+		CarritoDecompras nuevoCarrito = new CarritoDecompras();
 		
 	    Scanner leer = new Scanner(System.in);
 		
