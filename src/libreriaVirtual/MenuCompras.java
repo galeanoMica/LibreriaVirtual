@@ -1,31 +1,24 @@
 package libreriaVirtual;
 
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class MenuCompras {
-	Scanner leer = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+	
 
 	public void Menu () {
 		// TODO Auto-generated method stub
 		
+		Scanner leer = new Scanner(System.in);
+		StockLibreria stock = new StockLibreria();
 		
-		LocalDate fechaPublicacionPrincipito = LocalDate.of(1943, 04, 06);
-		LocalDate fechaPublicacionVogueMes= LocalDate.of(2023, 04, 02);
-		
-		Libro elPrincipitoDigital = new Libro(fechaPublicacionPrincipito,"El Principito - Digital", "Antoine de Saint-Exupéry", "Salamandra", 001, 800, "digital", 3);
-		
-		Libro elPrincipitoFisico = new Libro(fechaPublicacionPrincipito,"El Principito - Fisico", "Antoine de Saint-Exupéry", "Salamandra", 002, 800, "fisico", 3);
-		
-		Revista vogueDigital = new Revista(fechaPublicacionVogueMes,"Vogue - Digital", "Ediciones Condé Nast", 003, 400, "digital", 2);
-		
-		Revista vogueFisico = new Revista(fechaPublicacionVogueMes,"Vogue - Fisico", "Ediciones Condé Nast", 004, 400, "fisico", 2);
+		stock.agregarStock();
 		
 		CarritoDecompras nuevoCarrito = new CarritoDecompras();
 		
 	    
 		
-		String opcion = leer.next();
 		
 		System.out.println("Bienvenido al menú de compras");
 		System.out.println("1 - Consultar stock");
@@ -36,29 +29,47 @@ public class MenuCompras {
 		System.out.println("6 - Salir");
 		System.out.println("Para acceder a las opciones, ingrese el número correspondiente a ella"
 				+ " (ej: para consultar stock, ingrese el número 1)");
-		
+		String opcion;
 		do {
+			opcion = leer.next();
 			switch (opcion) {
 			case "1":
+				stock.mostrarStock();
 				
+				System.out.println();
+				System.out.println("Para acceder a las opciones, ingrese el número correspondiente a ella"
+						+ " (ej: para consultar stock, ingrese el número 1)");
 				break;
 			case "2":
 				  Eleccion();
 
+					System.out.println();
+					System.out.println("Para acceder a las opciones, ingrese el número correspondiente a ella"
+							+ " (ej: para consultar stock, ingrese el número 1)");
 				break;
 			case "3":
             System.out.println("_________________________________________________________________________");
             System.out.println("sus productos son" );
 			nuevoCarrito.mostrarCarrito();
             System.out.println("__________________________________________________________________________");
+
+			System.out.println();
+			System.out.println("Para acceder a las opciones, ingrese el número correspondiente a ella"
+					+ " (ej: para consultar stock, ingrese el número 1)");
 				break;
 			case "4":
              
 
-				    
+
+				System.out.println();
+				System.out.println("Para acceder a las opciones, ingrese el número correspondiente a ella"
+						+ " (ej: para consultar stock, ingrese el número 1)");  
 				break;
 			case "5":
-				
+
+				System.out.println();
+				System.out.println("Para acceder a las opciones, ingrese el número correspondiente a ella"
+						+ " (ej: para consultar stock, ingrese el número 1)");
 				break;
 			case "6":
 				
@@ -68,11 +79,8 @@ public class MenuCompras {
 				System.out.println("La opción seleccionada no es correcta, intentelo nuevamente.");
 				break;
 			}
-		} while (opcion.equals("6"));
-		
-		
-		
-		
+		} while (!opcion.equals("6"));
+	
 	}
 
 	public  int Eleccion (){
@@ -121,6 +129,7 @@ public class MenuCompras {
 	}
 
     
-
-
 }
+
+	
+
