@@ -47,10 +47,15 @@ public class MenuCompras {
 
 				break;
 			case "3":
-			
+            System.out.println("_________________________________________________________________________");
+            System.out.println("sus productos son" );
+			nuevoCarrito.mostrarCarrito();
+            System.out.println("__________________________________________________________________________");
 				break;
 			case "4":
-				
+             
+
+				    
 				break;
 			case "5":
 				
@@ -115,6 +120,7 @@ public class MenuCompras {
 
 	}
 
+    
 
 
 }
