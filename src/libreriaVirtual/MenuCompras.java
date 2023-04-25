@@ -4,8 +4,9 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 public class MenuCompras {
+	Scanner leer = new Scanner(System.in);
 
-	public static void main(String[] args) {
+	public void Menu () {
 		// TODO Auto-generated method stub
 		
 		
@@ -22,7 +23,7 @@ public class MenuCompras {
 		
 		CarritoDecompras nuevoCarrito = new CarritoDecompras();
 		
-	    Scanner leer = new Scanner(System.in);
+	    
 		
 		String opcion = leer.next();
 		
@@ -42,7 +43,8 @@ public class MenuCompras {
 				
 				break;
 			case "2":
-				
+				  Eleccion();
+
 				break;
 			case "3":
 			
@@ -65,6 +67,54 @@ public class MenuCompras {
 		
 		
 		
+		
 	}
+
+	public  int Eleccion (){
+		System.out.println("elegir una opcion ");
+		System.out.println("1_Libro");
+		System.out.println("2_Revista ");
+		int respuesta = leer.nextInt();
+		if (respuesta== 1 ){
+			System.out.println("su libro lo quiere en version");
+			DigitalOFisico();
+			return respuesta;
+		} else{
+			System.out.println("su revista lo quiere en version");
+			DigitalOFisico();
+			return respuesta ;
+		}
+
+	}
+
+	public int DigitalOFisico(){
+		System.out.println("1_digital");
+		System.out.println("2_fisico");
+		int res = leer.nextInt();
+		return res;
+	}
+	
+	public void TipoDeEleccion(int respuesta , int res ){
+		 
+		if (respuesta ==1 && res == 1 ){
+			System.out.println("los libros digitales son:");
+              ///agregar listas de libros digitales 
+		}else if (respuesta ==1 && res==2){
+			System.out.println("los libros fisicos son:");
+			///agregar listas de libros fisicos
+		}else if (respuesta == 2 && res==1 ){
+			System.out.println("las revista digitales son ");
+			///agregar listas de revista digitales 
+
+		}else  if ( respuesta == 2 && res== 1 ){
+			System.out.println("las revista fisica son");
+            ///agregar listas de revista fisicas 
+			
+		}
+
+
+	}
+
+
 
 }
