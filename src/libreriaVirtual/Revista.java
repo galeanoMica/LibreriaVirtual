@@ -52,6 +52,12 @@ public class Revista extends ProductoLibreria {
 		}else if(this.getTipo().equals("digital")) {
 			precioVenta *= 1.12;
 		}
-		return precioVenta;
+		return precioVenta;	
+	}
+	
+	@Override
+	public String toString() {
+		return "Libro || título: " + nombre + " , editor: " + editor + ", "
+				+ "precio de venta: $"+ getPrecioVenta()+ " cantidad: "+cantidad;
 	}
 }
