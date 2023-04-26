@@ -3,9 +3,6 @@ package libreriaVirtual;
 import java.util.Scanner;
 
 public class MenuCompras {
-	
-	public static void main(String[] args) {
-	
 
 	public void Menu () {
 		// TODO Auto-generated method stub
@@ -16,8 +13,6 @@ public class MenuCompras {
 		stock.agregarStock();
 		
 		CarritoDecompras nuevoCarrito = new CarritoDecompras();
-		
-	    
 		
 		
 		System.out.println("Bienvenido al menú de compras");
@@ -84,6 +79,7 @@ public class MenuCompras {
 	}
 
 	public  int Eleccion (){
+		Scanner leer = new Scanner(System.in);
 		System.out.println("elegir una opcion ");
 		System.out.println("1_Libro");
 		System.out.println("2_Revista ");
@@ -101,6 +97,7 @@ public class MenuCompras {
 	}
 
 	public int DigitalOFisico(){
+		Scanner leer = new Scanner(System.in);
 		System.out.println("1_digital");
 		System.out.println("2_fisico");
 		int res = leer.nextInt();
