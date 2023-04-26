@@ -57,7 +57,7 @@ public class Revista extends ProductoLibreria {
 	
 	@Override
 	public String toString() {
-		return "Libro || título: " + nombre + " , editor: " + editor + ", "
+		return "Revista || título: " + nombre + " , editor: " + editor + ", "
 				+ "precio de venta: $"+ getPrecioVenta()+ " cantidad: "+cantidad;
 	}
 }

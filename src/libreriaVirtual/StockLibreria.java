@@ -50,5 +50,52 @@ public void mostrarStock() {
 		System.out.println(productoLibreria);
 	}
 }
+public void stockFisicoLibro() {
+	for(ProductoLibreria productoLibreria : Stock) {
+		String fisico = productoLibreria.getTipo();
+		if(fisico.equals("fisico")) {
+			if (productoLibreria instanceof Libro) {
+			System.out.println(productoLibreria);
+			}
+		}
+	}
+}
+
+
+public void stockDigitalLibro() {
+	for(ProductoLibreria productoLibreria : Stock) {
+		String digital = productoLibreria.getTipo();
+		if(digital.equals("digital")) {
+			if (productoLibreria instanceof Libro) {
+			System.out.println(productoLibreria);
+			}
+		}
+	}
+	
+}
+
+public void stockFisicoRevista() {
+	for(ProductoLibreria productoLibreria : Stock) {
+		String fisico = productoLibreria.getTipo();
+		if(fisico.equals("fisico")) {
+			if (productoLibreria instanceof Revista) {
+			System.out.println(productoLibreria);
+			}
+		}
+	}
+}
+
+
+public void stockDigitalRevista() {
+	for(ProductoLibreria productoLibreria : Stock) {
+		String digital = productoLibreria.getTipo();
+		if(digital.equals("digital")) {
+			if (productoLibreria instanceof Revista) {
+			System.out.println(productoLibreria);
+			}
+		}
+	}
+	
+}
 	
 }

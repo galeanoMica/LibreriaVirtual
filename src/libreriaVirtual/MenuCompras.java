@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 public class MenuCompras {
 
-	public void Menu () {
+	public void Menu() {
 		// TODO Auto-generated method stub
 		
 		Scanner leer = new Scanner(System.in);
 		StockLibreria stock = new StockLibreria();
+		CarritoDecompras carritoCompras = new CarritoDecompras();
 		
 		stock.agregarStock();
 		
@@ -25,7 +26,10 @@ public class MenuCompras {
 		System.out.println("Para acceder a las opciones, ingrese el número correspondiente a ella"
 				+ " (ej: para consultar stock, ingrese el número 1)");
 		String opcion;
+		
+		
 		do {
+			;
 			opcion = leer.next();
 			switch (opcion) {
 			case "1":
@@ -36,8 +40,10 @@ public class MenuCompras {
 						+ " (ej: para consultar stock, ingrese el número 1)");
 				break;
 			case "2":
-				  Eleccion();
-
+				Eleccion();
+				
+				 
+				  
 					System.out.println();
 					System.out.println("Para acceder a las opciones, ingrese el número correspondiente a ella"
 							+ " (ej: para consultar stock, ingrese el número 1)");
@@ -87,6 +93,7 @@ public class MenuCompras {
 		if (respuesta== 1 ){
 			System.out.println("su libro lo quiere en version");
 			DigitalOFisico();
+			
 			return respuesta;
 		} else{
 			System.out.println("su revista lo quiere en version");
@@ -101,24 +108,26 @@ public class MenuCompras {
 		System.out.println("1_digital");
 		System.out.println("2_fisico");
 		int res = leer.nextInt();
+		
 		return res;
 	}
 	
 	public void TipoDeEleccion(int respuesta , int res ){
+		StockLibreria stock = new StockLibreria();
 		 
 		if (respuesta ==1 && res == 1 ){
 			System.out.println("los libros digitales son:");
-              ///agregar listas de libros digitales 
+			stock.stockDigitalLibro();
+			
 		}else if (respuesta ==1 && res==2){
 			System.out.println("los libros fisicos son:");
-			///agregar listas de libros fisicos
+			stock.stockFisicoLibro();
 		}else if (respuesta == 2 && res==1 ){
 			System.out.println("las revista digitales son ");
-			///agregar listas de revista digitales 
-
+			stock.stockDigitalRevista();
 		}else  if ( respuesta == 2 && res== 1 ){
 			System.out.println("las revista fisica son");
-            ///agregar listas de revista fisicas 
+           stock.stockFisicoRevista();
 			
 		}
 
