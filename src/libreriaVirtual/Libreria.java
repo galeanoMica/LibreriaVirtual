@@ -10,6 +10,7 @@ public final class Libreria {
 		MenuCompras menuCompras = new MenuCompras();
 		
 		menuCompras.Menu();
+		System.out.println();
 	}
 
 }
