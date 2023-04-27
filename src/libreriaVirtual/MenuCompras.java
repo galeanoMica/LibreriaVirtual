@@ -44,6 +44,8 @@ public class MenuCompras {
 				System.out.println();
 			
 				break;
+
+
 			case "2":
 			System.out.println("elegir una opcion ");
 			System.out.println("1_Libro");
@@ -57,6 +59,11 @@ public class MenuCompras {
 			   if ( res == 1 ){
 				System.out.println("los libros digitales son:");
 				stock.stockDigitalLibro();
+				
+				
+				
+				
+				
 				
 			  }else if (res==2){
 				System.out.println("los libros fisicos son:");
@@ -73,6 +80,7 @@ public class MenuCompras {
 			if ( res==1 ){
 				System.out.println("las revista digitales son ");
 				stock.stockDigitalRevista();
+				System.out.println("Elija la revista ");
 			}else  if (  res== 2 ){
 				System.out.println("las revista fisica son");
 			   stock.stockFisicoRevista();
@@ -87,6 +95,9 @@ public class MenuCompras {
 	
 		
 				break;
+
+
+
 			case "3":
             System.out.println("_________________________________________________________________________");
             System.out.println("sus productos son" );

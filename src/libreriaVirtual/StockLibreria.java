@@ -2,11 +2,12 @@ package libreriaVirtual;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-
+import java.util.Scanner;
+import libreriaVirtual.CarritoDecompras;
 public class StockLibreria {
 
 public ArrayList<ProductoLibreria>Stock;
-
+CarritoDecompras carrito = new CarritoDecompras();
 	
 	public StockLibreria() {
         this.Stock = new ArrayList<ProductoLibreria>();		
@@ -49,53 +50,95 @@ public void mostrarStock() {
 	for (ProductoLibreria productoLibreria : Stock) {
 		System.out.println(productoLibreria);
 	}
+
 }
 public void stockFisicoLibro() {
-	for(ProductoLibreria productoLibreria : Stock) {
-		String fisico = productoLibreria.getTipo();
-		if(fisico.equals("fisico")) {
-			if (productoLibreria instanceof Libro) {
-			System.out.println(productoLibreria);
-			}
-		}
-	}
+    ArrayList<Libro> librosFisicoDisponibles = new ArrayList<>();
+    int i = 1;
+    for (ProductoLibreria productoLibreria : Stock) {
+        String fisico = productoLibreria.getTipo();
+        if (fisico.equals("fisico")) {
+            if (productoLibreria instanceof Libro) {
+                System.out.println(i + ". " + productoLibreria);
+                librosFisicoDisponibles.add((Libro) productoLibreria);
+                i++;
+            }
+        }
+    }
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Seleccione el número del libro que desea guardar: ");
+    int seleccion = scanner.nextInt();
+    Libro libroSeleccionado = librosFisicoDisponibles.get(seleccion - 1);
+	//CarritoDecompras carrito = new CarritoDecompras();  instancie un carrito para ver si funcionaba, pero por ahora no
+	//carrito.agregarItem(libroSeleccionado);
+    System.out.println("Usted eligio el libro " + libroSeleccionado);
 }
 
 
 public void stockDigitalLibro() {
-	for(ProductoLibreria productoLibreria : Stock) {
-		String digital = productoLibreria.getTipo();
-		if(digital.equals("digital")) {
-			if (productoLibreria instanceof Libro) {
-			System.out.println(productoLibreria);
-			}
-		}
-	}
+	ArrayList<Libro> librosDigitalDisponibles = new ArrayList<>();
+    int i = 1;
+    for (ProductoLibreria productoLibreria : Stock) {
+        String fisico = productoLibreria.getTipo();
+        if (fisico.equals("digital")) {
+            if (productoLibreria instanceof Libro) {
+                System.out.println(i + ". " + productoLibreria);
+                librosDigitalDisponibles.add((Libro) productoLibreria);
+                i++;
+            }
+        }
+    }
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Seleccione el número del libro que desea guardar: ");
+    int seleccion = scanner.nextInt();
+    Libro libroSeleccionado = librosDigitalDisponibles.get(seleccion - 1);
+	
+    System.out.println("Usted eligio el libro " + libroSeleccionado);
 	
 }
 
 public void stockFisicoRevista() {
-	for(ProductoLibreria productoLibreria : Stock) {
-		String fisico = productoLibreria.getTipo();
-		if(fisico.equals("fisico")) {
-			if (productoLibreria instanceof Revista) {
-			System.out.println(productoLibreria);
-			}
-		}
-	}
+	ArrayList<Revista> revistaFisicoDisponibles = new ArrayList<>();
+    int i = 1;
+    for (ProductoLibreria productoLibreria : Stock) {
+        String fisico = productoLibreria.getTipo();
+        if (fisico.equals("fisico")) {
+            if (productoLibreria instanceof Revista) {
+                System.out.println(i + ". " + productoLibreria);
+                revistaFisicoDisponibles.add((Revista) productoLibreria);
+                i++;
+            }
+        }
+    }
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Seleccione el número del libro que desea guardar: ");
+    int seleccion = scanner.nextInt();
+    Revista revistaSeleccionado = revistaFisicoDisponibles.get(seleccion - 1);
+	
+    System.out.println("Usted eligio el libro " + revistaSeleccionado);
 }
 
 
 public void stockDigitalRevista() {
-	for(ProductoLibreria productoLibreria : Stock) {
-		String digital = productoLibreria.getTipo();
-		if(digital.equals("digital")) {
-			if (productoLibreria instanceof Revista) {
-			System.out.println(productoLibreria);
-			}
-		}
-	}
+	ArrayList<Revista> revistaDigitalDisponibles = new ArrayList<>();
+    int i = 1;
+    for (ProductoLibreria productoLibreria : Stock) {
+        String fisico = productoLibreria.getTipo();
+        if (fisico.equals("digital")) {
+            if (productoLibreria instanceof Revista) {
+                System.out.println(i + ". " + productoLibreria);
+                revistaDigitalDisponibles.add((Revista) productoLibreria);
+                i++;
+            }
+        }
+    }
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Seleccione el número del libro que desea guardar: ");
+    int seleccion = scanner.nextInt();
+    Revista libroSeleccionado = revistaDigitalDisponibles.get(seleccion - 1);
+	
+    System.out.println("Usted eligio el libro " + libroSeleccionado);
+
 	
 }
-	
 }
