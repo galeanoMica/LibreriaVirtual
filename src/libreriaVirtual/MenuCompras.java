@@ -65,7 +65,7 @@ public class MenuCompras {
 				System.out.println("la opcion no es correcta");
 			  }
 				
-			} else{
+			} else if(respuesta==2 ) {
 				System.out.println("su revista lo quiere en version");
 				System.out.println("1_digital");
 				System.out.println("2_fisico");
@@ -81,6 +81,8 @@ public class MenuCompras {
 				System.out.println("la opcion no es correcta");
 			  }
 				
+			}else{
+				System.out.println("la opcion no es correcta");
 			}
 	
 		
@@ -91,23 +93,17 @@ public class MenuCompras {
 			nuevoCarrito.mostrarCarrito();
             System.out.println("__________________________________________________________________________");
 
-			System.out.println();
-			System.out.println("Para acceder a las opciones, ingrese el número correspondiente a ella"
-					+ " (ej: para consultar stock, ingrese el número 1)");
+			
 				break;
 			case "4":
              
 
 
-				System.out.println();
-				System.out.println("Para acceder a las opciones, ingrese el número correspondiente a ella"
-						+ " (ej: para consultar stock, ingrese el número 1)");  
+				  
 				break;
 			case "5":
 
-				System.out.println();
-				System.out.println("Para acceder a las opciones, ingrese el número correspondiente a ella"
-						+ " (ej: para consultar stock, ingrese el número 1)");
+				
 				break;
 			case "6":
 				
@@ -118,6 +114,8 @@ public class MenuCompras {
 				break;
 			}
 		} while (!opcion.equals("6"));
+
+		System.out.println("muchas gracias por usar  el menu de compras ");
 	
 	}
 
