@@ -77,7 +77,9 @@ public class MenuCompras {
 				System.out.println("las revista fisica son");
 			   stock.stockFisicoRevista();
 				
-			}
+			}else{
+				System.out.println("la opcion no es correcta");
+			  }
 				
 			}
 	
