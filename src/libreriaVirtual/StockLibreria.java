@@ -4,13 +4,18 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 import libreriaVirtual.CarritoDecompras;
+
+
+
 public class StockLibreria {
 
 public ArrayList<ProductoLibreria>Stock;
-CarritoDecompras carrito = new CarritoDecompras();
+public CarritoDecompras carrito;
+
 	
 	public StockLibreria() {
-        this.Stock = new ArrayList<ProductoLibreria>();		
+        this.Stock = new ArrayList<ProductoLibreria>();
+        this.carrito = new CarritoDecompras();		
 		
 	}
 
@@ -54,6 +59,7 @@ public void mostrarStock() {
 }
 public void stockFisicoLibro() {
     ArrayList<Libro> librosFisicoDisponibles = new ArrayList<>();
+    
     int i = 1;
     for (ProductoLibreria productoLibreria : Stock) {
         String fisico = productoLibreria.getTipo();
@@ -70,7 +76,8 @@ public void stockFisicoLibro() {
     int seleccion = scanner.nextInt();
     Libro libroSeleccionado = librosFisicoDisponibles.get(seleccion - 1);
 	//CarritoDecompras carrito = new CarritoDecompras();  instancie un carrito para ver si funcionaba, pero por ahora no
-	//carrito.agregarItem(libroSeleccionado);
+	carrito.agregarItem(libroSeleccionado);
+   
     System.out.println("Usted eligio el libro " + libroSeleccionado);
 }
 
@@ -92,7 +99,7 @@ public void stockDigitalLibro() {
     System.out.print("Seleccione el número del libro que desea guardar: ");
     int seleccion = scanner.nextInt();
     Libro libroSeleccionado = librosDigitalDisponibles.get(seleccion - 1);
-	
+	carrito.agregarItem(libroSeleccionado);
     System.out.println("Usted eligio el libro " + libroSeleccionado);
 	
 }
@@ -114,7 +121,7 @@ public void stockFisicoRevista() {
     System.out.print("Seleccione el número del libro que desea guardar: ");
     int seleccion = scanner.nextInt();
     Revista revistaSeleccionado = revistaFisicoDisponibles.get(seleccion - 1);
-	
+	carrito.agregarItem(revistaSeleccionado);
     System.out.println("Usted eligio el libro " + revistaSeleccionado);
 }
 
@@ -135,9 +142,9 @@ public void stockDigitalRevista() {
     Scanner scanner = new Scanner(System.in);
     System.out.print("Seleccione el número del libro que desea guardar: ");
     int seleccion = scanner.nextInt();
-    Revista libroSeleccionado = revistaDigitalDisponibles.get(seleccion - 1);
-	
-    System.out.println("Usted eligio el libro " + libroSeleccionado);
+    Revista revistaSeleccionado = revistaDigitalDisponibles.get(seleccion - 1);
+	carrito.agregarItem(revistaSeleccionado);
+    System.out.println("Usted eligio el libro " + revistaSeleccionado);
 
 	
 }

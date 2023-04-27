@@ -19,7 +19,7 @@ public class MenuCompras {
 		
 		stock.agregarStock();
 		
-		CarritoDecompras nuevoCarrito = new CarritoDecompras();
+		//CarritoDecompras nuevoCarrito = new CarritoDecompras();
 		
 		
 		
@@ -101,7 +101,8 @@ public class MenuCompras {
 			case "3":
             System.out.println("_________________________________________________________________________");
             System.out.println("sus productos son" );
-			nuevoCarrito.mostrarCarrito();
+			
+			carritoCompras.mostrarCarrito();
             System.out.println("__________________________________________________________________________");
 
 			
