@@ -9,11 +9,10 @@ public final class Libreria {
 		
 		MenuCompras menuCompras = new MenuCompras();
 		
-		StockLibreria s = new StockLibreria();
-
-	
+		StockLibreria stockLibreria= new StockLibreria();
+		CarritoDecompras carritoCompras = new CarritoDecompras();
 		
-		menuCompras.Menu();
+		menuCompras.Menu(stockLibreria,carritoCompras);
 		System.out.println();
 
 	}

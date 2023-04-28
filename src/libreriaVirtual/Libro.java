@@ -67,12 +67,12 @@ public class Libro extends ProductoLibreria {
 		return precioVenta;
 	}
 
+
 	@Override
 	public String toString() {
 		return "Libro || título: " + titulo + ", autor principal: " + autorPrincipal + ", editorial: " + editorial + ", "
-				+ "precio de venta: $"+ getPrecioVenta()+ " cantidad: "+cantidad;
+				+ "precio de venta: $"+ getPrecioVenta()+ " cantidad: "+cantidad + ", codigo: "+getCodigo();
 	}
 
 	
-    
 }
