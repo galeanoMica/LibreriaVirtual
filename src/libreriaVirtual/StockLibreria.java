@@ -71,6 +71,8 @@ public void stockFisicoLibro(CarritoDecompras carrito) {
             if (productoLibreria instanceof Libro) {
                 System.out.println(i + ". " + productoLibreria);
                 librosFisicoDisponibles.add((Libro) productoLibreria);
+                int resta=1;
+                productoLibreria.cantidad= productoLibreria.cantidad - resta;
                 i++;
             }
         }
@@ -96,6 +98,8 @@ public void stockDigitalLibro(CarritoDecompras carrito) {
                 System.out.println(i + ". " + productoLibreria);
                 librosDigitalDisponibles.add((Libro) productoLibreria);
               System.out.println(librosDigitalDisponibles.size());
+              int resta=1;
+                productoLibreria.cantidad= productoLibreria.cantidad - resta;
                 i++;
             }
         }
@@ -118,6 +122,8 @@ public void stockFisicoRevista(CarritoDecompras carrito) {
             if (productoLibreria instanceof Revista) {
                 System.out.println(i + ". " + productoLibreria);
                 revistaFisicoDisponibles.add((Revista) productoLibreria);
+                int resta=1;
+                productoLibreria.cantidad= productoLibreria.cantidad - resta;
                 i++;
             }
         }
@@ -140,6 +146,8 @@ public void stockDigitalRevista(CarritoDecompras carrito) {
             if (productoLibreria instanceof Revista) {
                 System.out.println(i + ". " + productoLibreria);
                 revistaDigitalDisponibles.add((Revista) productoLibreria);
+                int resta=1;
+                productoLibreria.cantidad= productoLibreria.cantidad - resta;
                 i++;
             }
         }
