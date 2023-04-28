@@ -57,7 +57,11 @@ public void mostrarStock() {
 	}
 
 }
-public void stockFisicoLibro() {
+
+
+
+
+public void stockFisicoLibro(CarritoDecompras carrito) {
     ArrayList<Libro> librosFisicoDisponibles = new ArrayList<>();
     
     int i = 1;
@@ -82,7 +86,7 @@ public void stockFisicoLibro() {
 }
 
 
-public void stockDigitalLibro() {
+public void stockDigitalLibro(CarritoDecompras carrito) {
 	ArrayList<Libro> librosDigitalDisponibles = new ArrayList<>();
     int i = 1;
     for (ProductoLibreria productoLibreria : Stock) {
@@ -91,6 +95,7 @@ public void stockDigitalLibro() {
             if (productoLibreria instanceof Libro) {
                 System.out.println(i + ". " + productoLibreria);
                 librosDigitalDisponibles.add((Libro) productoLibreria);
+              System.out.println(librosDigitalDisponibles.size());
                 i++;
             }
         }
@@ -104,7 +109,7 @@ public void stockDigitalLibro() {
 	
 }
 
-public void stockFisicoRevista() {
+public void stockFisicoRevista(CarritoDecompras carrito) {
 	ArrayList<Revista> revistaFisicoDisponibles = new ArrayList<>();
     int i = 1;
     for (ProductoLibreria productoLibreria : Stock) {
@@ -126,7 +131,7 @@ public void stockFisicoRevista() {
 }
 
 
-public void stockDigitalRevista() {
+public void stockDigitalRevista(CarritoDecompras carrito) {
 	ArrayList<Revista> revistaDigitalDisponibles = new ArrayList<>();
     int i = 1;
     for (ProductoLibreria productoLibreria : Stock) {

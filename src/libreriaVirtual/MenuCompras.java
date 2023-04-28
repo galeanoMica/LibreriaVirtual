@@ -10,14 +10,14 @@ public class MenuCompras {
 	
 	
 	
-	public void Menu() {
+	public void Menu(StockLibreria stock, CarritoDecompras carrito) {
 		// TODO Auto-generated method stub
 		
 		Scanner leer = new Scanner(System.in);
-		StockLibreria stock = new StockLibreria();
-		CarritoDecompras carritoCompras = new CarritoDecompras();
+		StockLibreria stockLibreria = stock;
+		CarritoDecompras carritoCompras = carrito;
 		
-		stock.agregarStock();
+		stockLibreria.agregarStock();
 		
 		//CarritoDecompras nuevoCarrito = new CarritoDecompras();
 		
@@ -39,7 +39,7 @@ public class MenuCompras {
 			opcion = leer.next();
 			switch (opcion) {
 			case "1":
-				stock.mostrarStock();
+				stockLibreria.mostrarStock();
 				
 				System.out.println();
 			
@@ -58,16 +58,11 @@ public class MenuCompras {
 			   int res = leer.nextInt();
 			   if ( res == 1 ){
 				System.out.println("los libros digitales son:");
-				stock.stockDigitalLibro();
-				
-				
-				
-				
-				
+				stock.stockDigitalLibro(carritoCompras);
 				
 			  }else if (res==2){
 				System.out.println("los libros fisicos son:");
-				stock.stockFisicoLibro();
+				stock.stockFisicoLibro(carritoCompras);
 			  } else{
 				System.out.println("la opcion no es correcta");
 			  }
@@ -79,11 +74,12 @@ public class MenuCompras {
 				int res = leer.nextInt();
 			if ( res==1 ){
 				System.out.println("las revista digitales son ");
-				stock.stockDigitalRevista();
-				System.out.println("Elija la revista ");
+				
+				stock.stockDigitalRevista(carritoCompras);
+				System.out.println();
 			}else  if (  res== 2 ){
 				System.out.println("las revista fisica son");
-			   stock.stockFisicoRevista();
+			   stock.stockFisicoRevista(carritoCompras);
 				
 			}else{
 				System.out.println("la opcion no es correcta");
@@ -109,16 +105,16 @@ public class MenuCompras {
 				break;
 			case "4":
              
-
-
-				  
+				
+				carritoCompras.quitarItem();
+				
 				break;
 			case "5":
 
-				
+			carritoCompras.consultarPrecio();
 				break;
 			case "6":
-				
+		
 				break;
 
 			default:
